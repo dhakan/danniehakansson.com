@@ -5,11 +5,7 @@ const items = [
   {
     href: "/",
     label: "Home",
-  },
-  {
-    href: "/projects",
-    label: "Projects",
-  },
+  }
 ]
 
 const Header = () => (

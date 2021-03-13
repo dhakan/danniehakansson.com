@@ -9,26 +9,22 @@ import cvFile from "../assets/cv-en.pdf"
 
 const frontendSkills = [
   "HTML",
-  "JavaScript",
   "CSS",
+  "JavaScript",
+  "TypeScript",
   "React",
   "Gatsby",
-  "Next",
-  "FabricJS",
-  "Phaser.io",
-  "jQuery",
+  "Next"
 ]
 
 const backendSkills = [
+  "Node",
   "Python",
   "Django",
-  "Node",
-  "Postgres",
   "Docker",
   "Kubernetes",
   "Google Cloud Platform",
-  "Jenkins",
-  "CI/CD",
+  "AWS"
 ]
 
 const IndexPage = () => {
