@@ -51,7 +51,6 @@ main {
   flex: 1;
   max-width: 60ch;
   margin: 0 auto;
-  overflow-y: scroll;
 }
 
 form {
