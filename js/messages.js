@@ -1,12 +1,15 @@
 export default {
-  INTRO: `Hello, my name is
-    _____                    _      
-   |  __ \\                  (_)     
-   | |  | | __ _ _ __  _ __  _  ___ 
-   | |  | |/ _\` | '_ \\| '_ \\| |/ _ \\
-   | |__| | (_| | | | | | | | |  __/
-   |_____/ \\__,_|_| |_|_| |_|_|\\___|
-                                    
+  INTRO: `Hi, my name is
+
+/$$$$$$$                                /$$          
+| $$__  $$                              |__/          
+| $$  \\ $$  /$$$$$$  /$$$$$$$  /$$$$$$$  /$$  /$$$$$$ 
+| $$  | $$ |____  $$| $$__  $$| $$__  $$| $$ /$$__  $$
+| $$  | $$  /$$$$$$$| $$  \\ $$| $$  \\ $$| $$| $$$$$$$$
+| $$  | $$ /$$__  $$| $$  | $$| $$  | $$| $$| $$_____/
+| $$$$$$$/|  $$$$$$$| $$  | $$| $$  | $$| $$|  $$$$$$$
+|_______/  \\_______/|__/  |__/|__/  |__/|__/ \\_______/
+
 Type 'help' to see available commands...`,
   help: `Available commands are...
 
@@ -20,7 +23,7 @@ Type 'help' to see available commands...`,
 - contact      Contact me
 
 - music        My music`,
-  about: `Fullstack Developer with a passion for exercise and well-being.`,
+  about: `I'm Dannie, a Fullstack Developer with a passion for exercise and well-being.`,
   skills: `My skills are...
 
   - HTML
