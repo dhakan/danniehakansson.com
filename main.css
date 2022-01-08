@@ -1,0 +1,108 @@
+:root {
+  --clr-primary: #00fe00;
+  --clr-bg: black;
+
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  padding: 2em;
+  color: var(--clr-primary);
+  background: var(--clr-bg);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  min-height: 100vh;
+}
+
+body,
+h1,
+h2 {
+  font-size: 2.4rem;
+}
+
+main {
+  flex: 1;
+  max-width: 60ch;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+form {
+  display: flex;
+  margin-top: 1em;
+}
+
+.typing {
+  display: inline-block;
+}
+
+.typing::after {
+  background: var(--clr-primary);
+  content: "\00a0";
+  animation: blink-caret 1s step-end infinite;
+}
+
+input {
+  flex: 1;
+  margin-left: 1em;
+  background: none;
+  border: none;
+}
+
+input::after {
+  background: var(--clr-primary);
+  content: "\00a0";
+  animation: blink-caret 1s step-end infinite;
+}
+
+.pre {
+  white-space: pre;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    background: transparent;
+  }
+
+  50% {
+    background: var(--clr-primary);
+  }
+}
