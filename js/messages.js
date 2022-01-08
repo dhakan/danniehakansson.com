@@ -7,7 +7,7 @@ export default {
    | |__| | (_| | | | | | | | |  __/
    |_____/ \\__,_|_| |_|_| |_|_|\\___|
                                     
-  Type 'help' to see available commands...`,
+Type 'help' to see available commands...`,
   help: `Available commands are...
 
 - about        About me
@@ -30,7 +30,7 @@ export default {
   - Gatsby
   - Next
   - Node
-  
+
   - Python
   - Django
   - Docker
