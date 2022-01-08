@@ -78,6 +78,14 @@ form.addEventListener("submit", (e) => {
       text,
       "https://danniehakansson.com/static/cv-en-853e8962b6081b26ed371a2856a0cb0c.pdf"
     );
+  } else if (command === "help") {
+    startTyping({
+      text,
+      preformatted: true,
+      callback: typingDone,
+    });
+  } else if (command === "music") {
+    typeAndOpenNewTab(text, "https://soundcloud.com/dhakan93");
   } else {
     startTyping({
       text,

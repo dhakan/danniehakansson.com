@@ -10,13 +10,16 @@ export default {
   Type 'help' to see available commands...`,
   help: `Available commands are...
 
-  - about
-  - skills
-  - experience
-  - projects
-  - github
-  - cv
-  - contact`,
+- about        About me
+- skills       My skillset
+- experience   My work experience
+- projects     My hobby projects
+
+- github       My code
+- cv           My personal CV
+- contact      Contact me
+
+- music        My music`,
   about: `Fullstack Developer with a passion for exercise and well-being.`,
   skills: `My skills are...
 
@@ -81,6 +84,8 @@ Browse by typing 'alive'.`,
   github: `Opening 'Github' in a new tab.`,
   cv: `Opening 'CV' in a new tab.`,
   contact: `Get in touch at danniehakan@gmail.com if you wish to hire me.`,
+  
+  music: `Opening 'My music' in a new tab.`,
 
   // Projects
   youtube: `Opening 'Youtube Timestamp List Plugin' in a new tab.`,

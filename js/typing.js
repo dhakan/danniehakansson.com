@@ -29,7 +29,7 @@ function startTyping({
       return;
     }
 
-    window.scroll({ top: document.body.scrollHeight + 100 });
+    window.scroll({ top: document.body.scrollHeight });
 
     if (!firstLine) {
       element.append(document.createElement("br"));
