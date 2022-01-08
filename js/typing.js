@@ -51,7 +51,6 @@ function startTyping({
 
   isTyping = true;
   const lines = text.split("\n");
-  console.log(lines);
   typeLines(
     element,
     lines,

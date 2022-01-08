@@ -14,14 +14,29 @@ function typingDone() {
   isTyping = false;
 }
 
-function typeAndOpenNewTab(text, url) {
+function typeAndOpenNewTab(text, command, url) {
   startTyping({
     text,
     callback: () => {
       typingDone();
       setTimeout(() => {
-        window.open(url);
+        const result = window.open(url);
+
+        if (result) {
+          return;
+        }
+
+        handleBlockedPopup(command);
       }, 2000);
+    },
+  });
+}
+
+function handleBlockedPopup(command) {
+  startTyping({
+    text: `Your browser prevented the link from opening in a new tab. Enable popups from this website and type '${command}' again.`,
+    callback: () => {
+      typingDone();
     },
   });
 }
@@ -57,25 +72,31 @@ form.addEventListener("submit", (e) => {
   if (command === "youtube") {
     typeAndOpenNewTab(
       text,
+      command,
       "https://chrome.google.com/webstore/detail/youtube-timestamp-list-pl/bhaebpnlhphfjffkchdccafakpeimnpd"
     );
   } else if (command === "yatzy") {
-    typeAndOpenNewTab(text, "http://yatzy.danniehakansson.com");
+    typeAndOpenNewTab(text, command, "http://yatzy.danniehakansson.com");
   } else if (command === "snake") {
-    typeAndOpenNewTab(text, "https://snake.danniehakansson.com");
+    typeAndOpenNewTab(text, command, "https://snake.danniehakansson.com");
   } else if (command === "midi") {
-    typeAndOpenNewTab(text, "https://miditostaff.danniehakansson.com");
+    typeAndOpenNewTab(text, command, "https://miditostaff.danniehakansson.com");
   } else if (command === "css") {
-    typeAndOpenNewTab(text, "https://cssbattle-solutions.danniehakansson.com");
+    typeAndOpenNewTab(
+      text,
+      command,
+      "https://cssbattle-solutions.danniehakansson.com"
+    );
   } else if (command === "tobias") {
-    typeAndOpenNewTab(text, "https://tobias.danniehakansson.com");
+    typeAndOpenNewTab(text, command, "https://tobias.danniehakansson.com");
   } else if (command === "alive") {
-    typeAndOpenNewTab(text, "https://alive.danniehakansson.com");
+    typeAndOpenNewTab(text, command, "https://alive.danniehakansson.com");
   } else if (command === "github") {
-    typeAndOpenNewTab(text, "https://github.com/dhakan");
+    typeAndOpenNewTab(text, command, "https://github.com/dhakan");
   } else if (command === "cv") {
     typeAndOpenNewTab(
       text,
+      command,
       "https://danniehakansson.com/static/cv-en-853e8962b6081b26ed371a2856a0cb0c.pdf"
     );
   } else if (command === "help") {
@@ -85,7 +106,7 @@ form.addEventListener("submit", (e) => {
       callback: typingDone,
     });
   } else if (command === "music") {
-    typeAndOpenNewTab(text, "https://soundcloud.com/dhakan93");
+    typeAndOpenNewTab(text, command, "https://soundcloud.com/dhakan93");
   } else {
     startTyping({
       text,
