@@ -42,12 +42,12 @@ Type 'help' to see available commands...`,
   - AWS`,
   experience: `My experiences are...
             
-  - Changemaker Educations - [2021 - NOW]
-  - Klarna - [2020 - 2021]
-  - Dynamo Digital Ventures - [2015 - 2019]
-  - NCC/LoopRocks - [2017]
-  - DnB - [2017]
-  - ICA - [2015-2016]`,
+  - Teacher @ CM Educations - [2021 - NOW]
+  - Frontend Dev @ Klarna - [2020 - 2021]
+  - Fullstack Dev @ Dynamo - [2015 - 2019]
+  - Fullstack Dev @ NCC/LoopRocks - [2017]
+  - Frontend Dev @ DnB - [2017]
+  - Frontend Dev @ ICA - [2015-2016]`,
   projects: `My projects are...
             
   - Youtube Timestamp List Plugin
@@ -82,12 +82,13 @@ Type 'help' to see available commands...`,
   
   - Alive Superspelet
   
-Shooter game to promote a past Electro event I was part of arranging.
+Shooter game made to promote a past Electro/Dubstep event I was part of arranging
+in Helsingborg, sweden.
 Browse by typing 'alive'.`,
   github: `Opening 'Github' in a new tab.`,
   cv: `Opening 'CV' in a new tab.`,
   contact: `Get in touch at danniehakan@gmail.com if you wish to hire me.`,
-  
+
   music: `Opening 'My music' in a new tab.`,
 
   // Projects
