@@ -2,6 +2,8 @@
   --clr-primary: #00fe00;
   --clr-bg: rgb(0, 0, 0, 0.85);
 
+  --scanline-height: 100px;
+
   font-size: 62.5%;
 }
 
@@ -91,10 +93,10 @@ input::after {
 }
 
 .scanline {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  height: 100px;
+  height: var(--scanline-height);
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0) 0%,
@@ -102,7 +104,7 @@ input::after {
     rgba(0, 0, 0, 0.1) 100%
   );
   opacity: 0.1;
-  bottom: 100%;
+  bottom: -100%;
   animation: scanline 10s linear infinite;
   pointer-events: none;
 }
@@ -183,7 +185,7 @@ input::after {
     bottom: 100%;
   }
   100% {
-    bottom: 0%;
+    bottom: calc(var(--scanline-height) * -1);
   }
 }
 
