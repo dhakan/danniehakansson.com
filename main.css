@@ -31,7 +31,7 @@ p {
 }
 
 body {
-  padding: 2em;
+  padding: 3em;
   color: var(--clr-primary);
   background-color: var(--clr-bg);
   font-family: "Roboto Mono", monospace;
@@ -50,7 +50,7 @@ h2 {
 main {
   flex: 1;
   max-width: 60ch;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 main,
@@ -126,6 +126,7 @@ input::after {
       rgba(0, 0, 255, 0.06)
     );
   background-size: 100% 3px, 2px 100%;
+  /* filter: url(#SphereMapTest); */
 }
 
 .lines-effect::after {
