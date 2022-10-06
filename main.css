@@ -140,6 +140,19 @@ input::after {
   content: "";
 }
 
+.lines-effect::before {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/noise.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0.015;
+  content: "";
+}
+
 /* ::-webkit-scrollbar {
   width: 1rem;
 }
@@ -160,10 +173,6 @@ input::after {
 /* background: var(--clr-primary); */
 /* text-shadow: none; */
 /* } */
-
-.glitch {
-  animation: 5s ease 1s normal none infinite running glitch;
-}
 
 @keyframes scanline {
   0% {
