@@ -13,16 +13,16 @@ export default {
 Type 'help' to see available commands...`,
   help: `Available commands are...
 
-- about        About me
-- skills       My skillset
-- experience   My work experience
-- projects     My hobby projects
+- 'about'        About me
+- 'skills'       My skillset
+- 'experience'   My work experience
+- 'projects'     My hobby projects
 
-- github       My code
-- cv           My personal CV
-- contact      Contact me
+- 'github'       My code
+- 'cv'           My personal CV
+- 'contact'      Contact me
 
-- music        My music`,
+- 'music'        My music`,
   about: `I'm Dannie, a Fullstack Developer with a passion for exercise and well-being.`,
   skills: `My skills are...
 
@@ -42,7 +42,8 @@ Type 'help' to see available commands...`,
   - AWS`,
   experience: `My experiences are...
             
-  - Teacher @ CM Educations - [2021 - NOW]
+  - Frontend Dev @ Huawei - [2022 - 2022]
+  - Teacher @ CM Educations - [2021 - 2022]
   - Frontend Dev @ Klarna - [2020 - 2021]
   - Fullstack Dev @ Dynamo - [2015 - 2019]
   - Fullstack Dev @ NCC/LoopRocks - [2017]
@@ -50,10 +51,25 @@ Type 'help' to see available commands...`,
   - Frontend Dev @ ICA - [2015-2016]`,
   projects: `My projects are...
             
-  - Youtube Timestamp List Plugin
+  - Youtube Timestamps
   
-  Youtube timestamp navigation made easy.
+  Youtube timestamps made easy.
   Browse by typing 'youtube'.
+
+  - Midi to Staff
+  
+  Sheet music visualizer based on MIDI.
+  Browse by typing 'midi'.
+
+  - onykter.nu
+
+  Swedish midsummer drinking songs
+  Browse by typing 'onykter'.
+
+  - Waiting List
+
+  Real-time waiting list meant for students to sign up for help.
+  Browse by typing 'list'.
   
   - Yatzy
   
@@ -64,11 +80,6 @@ Type 'help' to see available commands...`,
   
   Snake made with online. 
   Browse by typing 'snake'.
-  
-  - Midi to Staff
-  
-  Sheet music visualizer based on MIDI.
-  Browse by typing 'midi'.
   
   - My CSS Battle Solutions
   
@@ -93,9 +104,11 @@ Browse by typing 'alive'.`,
 
   // Projects
   youtube: `Opening 'Youtube Timestamp List Plugin' in a new tab.`,
+  midi: `Opening 'Midi to Staff' in a new tab.`,
+  onykter: `Opening 'onykter.nu' in a new tab.`,
+  list: `Opening 'Waiting List' in a new tab.`,
   yatzy: `Opening 'Yatzy' in a new tab.`,
   snake: `Opening 'Snake' in a new tab.`,
-  midi: `Opening 'Midi to Staff' in a new tab.`,
   css: `Opening 'My CSS Battle Solutions' in a new tab.`,
   tobias: `Opening 'Legend of Tobias' in a new tab.`,
   alive: `Opening 'Alive Superspelet' in a new tab.`,

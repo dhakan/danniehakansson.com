@@ -69,49 +69,71 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  if (command === "youtube") {
-    typeAndOpenNewTab(
-      text,
-      command,
-      "https://chrome.google.com/webstore/detail/youtube-timestamp-list-pl/bhaebpnlhphfjffkchdccafakpeimnpd"
-    );
-  } else if (command === "yatzy") {
-    typeAndOpenNewTab(text, command, "http://yatzy.danniehakansson.com");
-  } else if (command === "snake") {
-    typeAndOpenNewTab(text, command, "https://snake.danniehakansson.com");
-  } else if (command === "midi") {
-    typeAndOpenNewTab(text, command, "https://miditostaff.danniehakansson.com");
-  } else if (command === "css") {
-    typeAndOpenNewTab(
-      text,
-      command,
-      "https://cssbattle-solutions.danniehakansson.com"
-    );
-  } else if (command === "tobias") {
-    typeAndOpenNewTab(text, command, "https://tobias.danniehakansson.com");
-  } else if (command === "alive") {
-    typeAndOpenNewTab(text, command, "https://alive.danniehakansson.com");
-  } else if (command === "github") {
-    typeAndOpenNewTab(text, command, "https://github.com/dhakan");
-  } else if (command === "cv") {
-    typeAndOpenNewTab(
-      text,
-      command,
-      "https://danniehakansson.com/static/cv-en-853e8962b6081b26ed371a2856a0cb0c.pdf"
-    );
-  } else if (command === "help") {
-    startTyping({
-      text,
-      preformatted: true,
-      callback: typingDone,
-    });
-  } else if (command === "music") {
-    typeAndOpenNewTab(text, command, "https://soundcloud.com/dhakan93");
-  } else {
-    startTyping({
-      text,
-      callback: typingDone,
-    });
+  switch (command) {
+    case "help":
+      startTyping({
+        text,
+        preformatted: true,
+        callback: typingDone,
+      });
+      break;
+    case "youtube":
+      typeAndOpenNewTab(
+        text,
+        command,
+        "https://chrome.google.com/webstore/detail/youtube-timestamp-list-pl/bhaebpnlhphfjffkchdccafakpeimnpd"
+      );
+      break;
+    case "midi":
+      typeAndOpenNewTab(
+        text,
+        command,
+        "https://miditostaff.danniehakansson.com"
+      );
+      break;
+    case "yatzy":
+      typeAndOpenNewTab(text, command, "http://yatzy.danniehakansson.com");
+      break;
+    case "snake":
+      typeAndOpenNewTab(text, command, "https://snake.danniehakansson.com");
+      break;
+    case "css":
+      typeAndOpenNewTab(
+        text,
+        command,
+        "https://cssbattle-solutions.danniehakansson.com"
+      );
+      break;
+    case "tobias":
+      typeAndOpenNewTab(text, command, "https://tobias.danniehakansson.com");
+      break;
+    case "alive":
+      typeAndOpenNewTab(text, command, "https://alive.danniehakansson.com");
+      break;
+    case "github":
+      typeAndOpenNewTab(text, command, "https://github.com/dhakan");
+      break;
+    case "cv":
+      typeAndOpenNewTab(
+        text,
+        command,
+        "https://danniehakansson.com/static/cv-en-853e8962b6081b26ed371a2856a0cb0c.pdf"
+      );
+      break;
+    case "music":
+      typeAndOpenNewTab(text, command, "https://soundcloud.com/dhakan93");
+      break;
+    case "list":
+      typeAndOpenNewTab(text, command, "https://list.danniehakansson.com");
+      break;
+    case "onykter":
+      typeAndOpenNewTab(text, command, "https://onykter.nu");
+      break;
+    default:
+      startTyping({
+        text,
+        callback: typingDone,
+      });
   }
 });
 
