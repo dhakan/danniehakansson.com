@@ -140,7 +140,15 @@ form.addEventListener("submit", (e) => {
 isTyping = true;
 
 startTyping({
-  text: messages.INTRO,
+  text: `...BOOTING UP SYSTEM`,
   preformatted: true,
-  callback: typingDone,
+  callback: () => {
+    setTimeout(() => {
+      startTyping({
+        text: messages.INTRO,
+        preformatted: true,
+        callback: typingDone,
+      });
+    }, 2000);
+  },
 });
