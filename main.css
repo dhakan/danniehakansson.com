@@ -82,13 +82,14 @@ input {
   margin-left: 1em;
   background: none;
   border: none;
+  caret-color: transparent;
 }
 
-input::after {
+/* input::after {
   background: var(--clr-primary);
   content: "\00a0";
   animation: blink-caret 1s step-end infinite;
-}
+} */
 
 .pre {
   white-space: pre;
@@ -100,14 +101,12 @@ input::after {
   right: 0;
   height: var(--scanline-height);
   background: linear-gradient(
-    0deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(255, 255, 255, 0.31) 100%,
+    rgba(255, 255, 255, 0.31) 30%,
     rgba(0, 0, 0, 0.1) 100%
   );
   opacity: 0.1;
-  bottom: 10px;
-  animation: scanline 10s linear infinite;
+  animation: scanline 5s linear infinite;
   pointer-events: none;
 }
 
@@ -156,7 +155,6 @@ input::after {
   z-index: 1000;
   content: "";
 }
-
 
 /* ::-webkit-scrollbar {
   width: 1rem;
