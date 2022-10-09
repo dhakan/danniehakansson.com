@@ -1,5 +1,6 @@
 import messages from "./messages.js";
 import { startTyping } from "./typing.js";
+import { isDesktop } from "./viewport.js";
 
 const form = document.querySelector("form");
 const input = document.querySelector("input");
@@ -26,20 +27,22 @@ function typeAndOpenNewTab(text, command, url) {
           return;
         }
 
-        handleBlockedPopup(command);
+        location.href = url;
+
+        // handleBlockedPopup(command);
       }, 2000);
     },
   });
 }
 
-function handleBlockedPopup(command) {
-  startTyping({
-    text: `Your browser prevented the link from opening in a new tab. Enable popups from this website and type '${command}' again.`,
-    callback: () => {
-      typingDone();
-    },
-  });
-}
+// function handleBlockedPopup(command) {
+//   startTyping({
+//     text: `Your browser prevented the link from opening in a new tab. Enable popups from this website and type '${command}' again.`,
+//     callback: () => {
+//       typingDone();
+//     },
+//   });
+// }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -52,8 +55,10 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  const command = input.value.trim();
+  const command = input.value.trim().toLowerCase();
   input.value = "";
+
+  window.scroll({ top: 0 });
 
   isTyping = true;
 
@@ -145,7 +150,7 @@ startTyping({
   callback: () => {
     setTimeout(() => {
       startTyping({
-        text: messages.INTRO,
+        text: messages.intro,
         preformatted: true,
         callback: typingDone,
       });

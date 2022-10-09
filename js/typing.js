@@ -1,3 +1,5 @@
+import { isDesktop } from "./viewport.js";
+
 let isTyping = false;
 
 const typingElement = document.querySelector(".typing");
@@ -29,7 +31,9 @@ function startTyping({
       return;
     }
 
-    window.scroll({ top: document.body.scrollHeight });
+    if (isDesktop()) {
+      window.scroll({ top: document.body.scrollHeight });
+    }
 
     if (!firstLine) {
       element.append(document.createElement("br"));
@@ -42,6 +46,10 @@ function startTyping({
   }
 
   if (preformatted) {
+    preformatted = isDesktop();
+  }
+
+  if (preformatted) {
     element.classList.add("pre");
   } else {
     element.classList.remove("pre");
@@ -50,6 +58,11 @@ function startTyping({
   element.textContent = "";
 
   isTyping = true;
+
+  if (text.desktop || text.mobile) {
+    text = isDesktop() ? text.desktop : text.mobile;
+  }
+
   const lines = text.split("\n");
   typeLines(
     element,
