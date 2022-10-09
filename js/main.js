@@ -119,11 +119,7 @@ form.addEventListener("submit", (e) => {
       typeAndOpenNewTab(text, command, "https://github.com/dhakan");
       break;
     case "cv":
-      typeAndOpenNewTab(
-        text,
-        command,
-        "https://danniehakansson.com/static/cv-en-853e8962b6081b26ed371a2856a0cb0c.pdf"
-      );
+      typeAndOpenNewTab(text, command, "assets/cv-en.pdf");
       break;
     case "music":
       typeAndOpenNewTab(text, command, "https://soundcloud.com/dhakan93");
