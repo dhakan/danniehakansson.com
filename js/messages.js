@@ -56,20 +56,20 @@ Type 'help' to see available commands...`,
   - GCP
   - AWS`,
   experience: {
-    desktop: `My experiences are...
+    desktop: `My experience is...
             
-    - Frontend Dev @ Huawei - [2022 - 2022]
+    - Frontend Dev @ Huawei - [2022]
     - Teacher @ CM Educations - [2021 - 2022]
     - Frontend Dev @ Klarna - [2020 - 2021]
     - Fullstack Dev @ Dynamo - [2015 - 2019]
     - Fullstack Dev @ NCC/LoopRocks - [2017]
     - Frontend Dev @ DnB - [2017]
     - Frontend Dev @ ICA - [2015-2016]`,
-    mobile: `My experiences are...
+    mobile: `My experience is...
             
     Frontend Dev 
     Huawei
-    [2022 - 2022]
+    [2022]
 
     Teacher 
     CM Educations
