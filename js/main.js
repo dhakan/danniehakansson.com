@@ -142,12 +142,10 @@ isTyping = true;
 
 startTyping({
   text: `...BOOTING UP SYSTEM`,
-  preformatted: true,
   callback: () => {
     setTimeout(() => {
       startTyping({
         text: messages.intro,
-        preformatted: true,
         callback: typingDone,
       });
     }, 2000);
