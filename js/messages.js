@@ -49,6 +49,7 @@ Type 'help' to see available commands...`,
   experience: {
     desktop: `My experience is...
             
+    - Fullstack Dev @ Ikea - [2023]
     - Frontend Dev @ Huawei - [2022]
     - Teacher @ CM Educations - [2021 - 2022]
     - Frontend Dev @ Klarna - [2020 - 2021]
@@ -58,6 +59,10 @@ Type 'help' to see available commands...`,
     - Frontend Dev @ ICA - [2015-2016]`,
     mobile: `My experience is...
             
+    Fullstack Dev
+    Ikea
+    [2023]
+
     Frontend Dev 
     Huawei
     [2022]
@@ -98,35 +103,15 @@ Type 'help' to see available commands...`,
   Sheet music visualizer based on MIDI.
   Browse by typing 'midi'.
 
-  - onykter.nu
-
-  Swedish midsummer drinking songs
-  Browse by typing 'onykter'.
-
   - Waiting List
 
   Real-time waiting list meant for students to sign up for help.
   Browse by typing 'list'.
   
-  - Yatzy
-  
-  Yatzy made with online.
-  Browse by typing 'yatzy'.
-  
-  - Snake
-  
-  Snake made with online. 
-  Browse by typing 'snake'.
-  
   - My CSS Battle Solutions
   
   Solutions to the classic CSS Battles.
   Browse by typing 'css'.
-  
-  - Legend of Tobias
-  
-  WIP platforming game.
-  Browse by typing 'tobias'.
   
   - Alive Superspelet
   
@@ -140,13 +125,9 @@ Browse by typing 'alive'.`,
   music: `Opening 'My music'.`,
 
   // Projects
-  youtube: `Opening 'Youtube Timestamp List Plugin'.`,
+  youtube: `Opening 'Youtube Timestamps'.`,
   midi: `Opening 'Midi to Staff'.`,
-  onykter: `Opening 'onykter.nu'.`,
   list: `Opening 'Waiting List'.`,
-  yatzy: `Opening 'Yatzy'.`,
-  snake: `Opening 'Snake'.`,
   css: `Opening 'My CSS Battle Solutions'.`,
-  tobias: `Opening 'Legend of Tobias'.`,
   alive: `Opening 'Alive Superspelet'.`,
 };

@@ -1,5 +1,6 @@
 :root {
-  --clr-primary: #00fe15;
+  /* --clr-primary: #00fe15; */
+  --clr-primary: #33ff00;
   --clr-bg: rgb(0, 0, 0, 0.85);
 
   --font-size-default: 1.6rem;
@@ -37,7 +38,7 @@ body {
   color: var(--clr-primary);
   background-color: var(--clr-bg);
   font-family: "Roboto Mono", monospace;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.2em;
   min-height: 100vh;
