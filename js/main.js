@@ -1,6 +1,5 @@
 import messages from "./messages.js";
 import { startTyping } from "./typing.js";
-import { isDesktop } from "./viewport.js";
 
 const form = document.querySelector("form");
 const input = document.querySelector("input");
@@ -83,11 +82,7 @@ form.addEventListener("submit", (e) => {
       });
       break;
     case "youtube":
-      typeAndOpenNewTab(
-        text,
-        command,
-        "https://chrome.google.com/webstore/detail/youtube-timestamp-list-pl/bhaebpnlhphfjffkchdccafakpeimnpd"
-      );
+      typeAndOpenNewTab(text, command, "https://youtubetimestamps.com/");
       break;
     case "midi":
       typeAndOpenNewTab(
