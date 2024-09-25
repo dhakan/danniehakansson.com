@@ -84,18 +84,15 @@ form.addEventListener("submit", (e) => {
     case "youtube":
       typeAndOpenNewTab(text, command, "https://youtubetimestamps.com/");
       break;
+    case "hilda":
+      typeAndOpenNewTab(text, command, "https://hildadennyvocalcoach.com/");
+      break;
     case "midi":
       typeAndOpenNewTab(
         text,
         command,
         "https://miditostaff.danniehakansson.com"
       );
-      break;
-    case "yatzy":
-      typeAndOpenNewTab(text, command, "http://yatzy.danniehakansson.com");
-      break;
-    case "snake":
-      typeAndOpenNewTab(text, command, "https://snake.danniehakansson.com");
       break;
     case "css":
       typeAndOpenNewTab(
@@ -121,9 +118,6 @@ form.addEventListener("submit", (e) => {
       break;
     case "list":
       typeAndOpenNewTab(text, command, "https://list.danniehakansson.com");
-      break;
-    case "onykter":
-      typeAndOpenNewTab(text, command, "https://onykter.nu");
       break;
     default:
       startTyping({

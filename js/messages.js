@@ -36,20 +36,15 @@ Type 'help' to see available commands...`,
   - CSS
   - JS/TS
   - React
-  - Gatsby
-  - Next
   - Node
-
   - Python
   - Django
-  - Docker
-  - Kubernetes
-  - GCP
-  - AWS`,
+  - Golang
+  - Google Cloud`,
   experience: {
     desktop: `My experience is...
             
-    - Fullstack Dev @ Ikea - [2023]
+    - Fullstack Dev @ Ikea - [2023 - Present]
     - Frontend Dev @ Huawei - [2022]
     - Teacher @ CM Educations - [2021 - 2022]
     - Frontend Dev @ Klarna - [2020 - 2021]
@@ -61,7 +56,7 @@ Type 'help' to see available commands...`,
             
     Fullstack Dev
     Ikea
-    [2023]
+    [2023 - Present]
 
     Frontend Dev 
     Huawei
@@ -93,10 +88,14 @@ Type 'help' to see available commands...`,
   },
   projects: `My projects are...
             
-  - Youtube Timestamps
+  - Tubestamps
   
-  Youtube timestamps made easy.
-  Browse by typing 'youtube'.
+  The ultimate video navigation tool.
+  Browse by typing 'tubestamps'.
+
+  - Hilda Denny Vocal Coach
+
+  Website for a vocal coach.
 
   - Midi to Staff
   
@@ -106,18 +105,7 @@ Type 'help' to see available commands...`,
   - Waiting List
 
   Real-time waiting list meant for students to sign up for help.
-  Browse by typing 'list'.
-  
-  - My CSS Battle Solutions
-  
-  Solutions to the classic CSS Battles.
-  Browse by typing 'css'.
-  
-  - Alive Superspelet
-  
-Shooter game made to promote a past Electro/Dubstep event I was part of arranging
-in Helsingborg, Sweden.
-Browse by typing 'alive'.`,
+  Browse by typing 'list'.`,
   github: `Opening 'Github'.`,
   cv: `Opening 'CV'.`,
   contact: `Get in touch at danniehakan@gmail.com if you wish to hire me.`,
@@ -125,7 +113,8 @@ Browse by typing 'alive'.`,
   music: `Opening 'My music'.`,
 
   // Projects
-  youtube: `Opening 'Youtube Timestamps'.`,
+  tubestamps: `Opening 'Tubestamps'.`,
+  hilda: `Opening 'Hilda Denny Vocal Coach'.`,
   midi: `Opening 'Midi to Staff'.`,
   list: `Opening 'Waiting List'.`,
   css: `Opening 'My CSS Battle Solutions'.`,
