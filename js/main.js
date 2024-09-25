@@ -46,6 +46,16 @@ function typeAndOpenNewTab(text, command, url) {
 function handleCommand(command) {
   const text = messages[command];
 
+  if (!text) {
+    startTyping({
+      text: `Unknown command: ${command}
+            
+      Type 'help' to see available commands...`,
+      callback: typingDone,
+    });
+    return;
+  }
+
   switch (command) {
     case "help":
       startTyping({
@@ -117,18 +127,6 @@ form.addEventListener("submit", (e) => {
   window.scroll({ top: 0 });
 
   isTyping = true;
-
-  const text = messages[command];
-
-  if (!text) {
-    startTyping({
-      text: `Unknown command: ${command}
-            
-      Type 'help' to see available commands...`,
-      callback: typingDone,
-    });
-    return;
-  }
 
   const searchParams = new URLSearchParams(window.location.search);
   searchParams.set("command", command);
