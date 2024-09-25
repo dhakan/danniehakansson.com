@@ -43,35 +43,8 @@ function typeAndOpenNewTab(text, command, url) {
 //   });
 // }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  if (!input.value.trim().length) {
-    return;
-  }
-
-  if (isTyping) {
-    return;
-  }
-
-  const command = input.value.trim().toLowerCase();
-  input.value = "";
-
-  window.scroll({ top: 0 });
-
-  isTyping = true;
-
+function handleCommand(command) {
   const text = messages[command];
-
-  if (!text) {
-    startTyping({
-      text: `Unknown command: ${command}
-            
-      Type 'help' to see available commands...`,
-      callback: typingDone,
-    });
-    return;
-  }
 
   switch (command) {
     case "help":
@@ -81,8 +54,8 @@ form.addEventListener("submit", (e) => {
         callback: typingDone,
       });
       break;
-    case "youtube":
-      typeAndOpenNewTab(text, command, "https://youtubetimestamps.com/");
+    case "tubestamps":
+      typeAndOpenNewTab(text, command, "https://tubestamps.app/");
       break;
     case "hilda":
       typeAndOpenNewTab(text, command, "https://hildadennyvocalcoach.com/");
@@ -125,18 +98,62 @@ form.addEventListener("submit", (e) => {
         callback: typingDone,
       });
   }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (!input.value.trim().length) {
+    return;
+  }
+
+  if (isTyping) {
+    return;
+  }
+
+  const command = input.value.trim().toLowerCase();
+  input.value = "";
+
+  window.scroll({ top: 0 });
+
+  isTyping = true;
+
+  const text = messages[command];
+
+  if (!text) {
+    startTyping({
+      text: `Unknown command: ${command}
+            
+      Type 'help' to see available commands...`,
+      callback: typingDone,
+    });
+    return;
+  }
+
+  const searchParams = new URLSearchParams(window.location.search);
+  searchParams.set("command", command);
+  history.pushState({}, "", `${window.location.pathname}?${searchParams}`);
+
+  handleCommand(command);
 });
 
 isTyping = true;
 
-startTyping({
-  text: `...BOOTING UP SYSTEM`,
-  callback: () => {
-    setTimeout(() => {
-      startTyping({
-        text: messages.intro,
-        callback: typingDone,
-      });
-    }, 2000);
-  },
-});
+const searchParams = new URLSearchParams(window.location.search);
+const storedCommand = searchParams.get("command");
+
+if (storedCommand) {
+  handleCommand(storedCommand);
+} else {
+  startTyping({
+    text: `...BOOTING UP SYSTEM`,
+    callback: () => {
+      setTimeout(() => {
+        startTyping({
+          text: messages.intro,
+          callback: typingDone,
+        });
+      }, 2000);
+    },
+  });
+}
