@@ -27,30 +27,21 @@ function typeAndOpenNewTab(text, command, url) {
         }
 
         location.href = url;
-
-        // handleBlockedPopup(command);
       }, 2000);
     },
   });
 }
 
-// function handleBlockedPopup(command) {
-//   startTyping({
-//     text: `Your browser prevented the link from opening in a new tab. Enable popups from this website and type '${command}' again.`,
-//     callback: () => {
-//       typingDone();
-//     },
-//   });
-// }
-
 function handleCommand(command) {
   const text = messages[command];
 
   if (!text) {
+    const helpText = messages.help;
+
     startTyping({
       text: `Unknown command: ${command}
             
-      Type 'help' to see available commands...`,
+${helpText}`,
       callback: typingDone,
     });
     return;
@@ -143,15 +134,13 @@ const storedCommand = searchParams.get("command");
 if (storedCommand) {
   handleCommand(storedCommand);
 } else {
+  const helpText = messages.help;
+
   startTyping({
-    text: `...BOOTING UP SYSTEM`,
-    callback: () => {
-      setTimeout(() => {
-        startTyping({
-          text: messages.intro,
-          callback: typingDone,
-        });
-      }, 2000);
-    },
+    text: `${messages.intro}
+    
+    ${helpText}
+    `,
+    callback: typingDone,
   });
 }
